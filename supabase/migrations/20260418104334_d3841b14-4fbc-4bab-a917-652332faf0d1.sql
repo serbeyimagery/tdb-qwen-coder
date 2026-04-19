@@ -1,0 +1,1 @@
+CREATE POLICY "deny_all_rate_limit" ON public.rate_limit_log FOR SELECT USING (false);

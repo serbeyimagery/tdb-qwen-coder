@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Mountain Air palette */
+    --background: 200 20% 88%;       /* Misty Light Blue #D4E1E7 */
+    --foreground: 204 65% 11%;       /* Deep Forest Green #082434 */
+
+    --card: 200 25% 94%;
+    --card-foreground: 204 65% 11%;
+
+    --popover: 200 25% 94%;
+    --popover-foreground: 204 65% 11%;
+
+    --primary: 204 65% 11%;          /* Deep Forest Green #082434 */
+    --primary-foreground: 200 20% 88%;
+
+    --secondary: 200 20% 88%;        /* Misty Light Blue */
+    --secondary-foreground: 204 65% 11%;
+
+    --muted: 200 15% 82%;
+    --muted-foreground: 204 30% 35%;
+
+    --accent: 140 12% 55%;           /* Sage / Muted Moss #7F9A83 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 18% 78%;
+    --input: 200 18% 78%;
+    --ring: 204 65% 11%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --sage: 140 12% 55%;
+    --forest: 204 65% 11%;
+    --misty: 200 20% 88%;
+    --hero-bg: 204 65% 6%;
+    --hero-text: 200 20% 92%;
+    --gold: 38 65% 55%;
+
+    --sidebar-background: 200 20% 94%;
+    --sidebar-foreground: 204 65% 11%;
+    --sidebar-primary: 204 65% 11%;
+    --sidebar-primary-foreground: 200 20% 88%;
+    --sidebar-accent: 140 12% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 200 18% 78%;
+    --sidebar-ring: 204 65% 11%;
+  }
+
+  .dark {
+    --background: 204 65% 6%;
+    --foreground: 200 20% 88%;
+
+    --card: 204 50% 10%;
+    --card-foreground: 200 20% 88%;
+
+    --popover: 204 50% 10%;
+    --popover-foreground: 200 20% 88%;
+
+    --primary: 200 20% 88%;
+    --primary-foreground: 204 65% 6%;
+
+    --secondary: 204 40% 15%;
+    --secondary-foreground: 200 20% 88%;
+
+    --muted: 204 30% 15%;
+    --muted-foreground: 200 15% 60%;
+
+    --accent: 140 12% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 30% 18%;
+    --input: 204 30% 18%;
+    --ring: 200 20% 88%;
+
+    --sage: 140 12% 55%;
+    --forest: 200 20% 88%;
+    --misty: 204 65% 6%;
+    --hero-bg: 204 65% 4%;
+    --hero-text: 200 20% 92%;
+    --gold: 38 65% 55%;
+
+    --sidebar-background: 204 50% 8%;
+    --sidebar-foreground: 200 20% 88%;
+    --sidebar-primary: 200 20% 88%;
+    --sidebar-primary-foreground: 204 65% 6%;
+    --sidebar-accent: 140 12% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 204 30% 18%;
+    --sidebar-ring: 200 20% 88%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+  }
+}
+
+/* Hero section styles */
+@keyframes spin-cw { to { transform: rotate(360deg); } }
+@keyframes spin-ccw { to { transform: rotate(-360deg); } }
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes ping-ring {
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUpSlow {
+  from { opacity: 0; transform: translateY(34px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes underlineExpand {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes shimmerSlide {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(110%); }
+}
+
+.anim-badge { opacity: 0; animation: scaleIn 0.6s cubic-bezier(.16,1,.3,1) 0.2s forwards; }
+.anim-heading { opacity: 0; animation: fadeInUpSlow 1s cubic-bezier(.16,1,.3,1) 0.3s forwards; }
+.anim-desc { opacity: 0; animation: fadeIn 0.8s ease 0.8s forwards; }
+.anim-buttons { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(.16,1,.3,1) 1s forwards; }
+
+/* Reading content styles */
+.reading-content {
+  font-family: 'Lora', serif;
+  line-height: 1.8;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.hymn-lyrics {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.stanza-block {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.chorus-block {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: hsl(var(--accent) / 0.1);
+  border-radius: var(--radius);
+}
