@@ -191,7 +191,7 @@
   display: flex;
   align-items: center;
   padding-top: 72px;
-  background: #0a0f0b;
+  background: #082434; /* Deep Forest Green - Secondary */
   cursor: none;
   overflow: hidden;
 }
@@ -256,7 +256,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: hsl(140, 42%, 68%);
+  background: #7F9A83; /* Sage / Muted Moss - Accent */
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
@@ -272,7 +272,7 @@
   position: fixed;
   width: 40px;
   height: 40px;
-  border: 2px solid hsl(140, 42%, 68%, 0.5);
+  border: 2px solid rgba(127,154,131, 0.5); /* Sage with opacity - Accent */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -288,7 +288,7 @@
 .cursor-ring.moving {
   width: 55px;
   height: 55px;
-  border-color: hsl(140, 42%, 68%, 0.8);
+  border-color: rgba(127,154,131, 0.8); /* Sage with higher opacity - Accent */
 }
 
 .hero-text {
@@ -324,11 +324,11 @@
 .badge-dot { position: relative; width: 8px; height: 8px; flex-shrink: 0; }
 .badge-dot-inner {
   position: absolute; inset: 0;
-  border-radius: 50%; background: #7f9a83;
+  border-radius: 50%; background: #7F9A83; /* Sage - Accent */
 }
 .badge-dot-ring {
   position: absolute; inset: 0;
-  border-radius: 50%; background: #7f9a83;
+  border-radius: 50%; background: #7F9A83; /* Sage - Accent */
   animation: pingRing 1.2s cubic-bezier(0,0,.2,1) infinite;
 }
 .badge-dot-ring.delay { animation-delay: 0.5s; }
@@ -344,7 +344,7 @@
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #7f9a83;
+  color: #7F9A83; /* Sage - Accent */
 }
 
 .hero-heading {
@@ -356,7 +356,7 @@
   display: block;
   font-weight: 300;
   font-size: clamp(2rem, 4.5vw, 3.6rem);
-  color: rgba(230, 240, 232, 0.65);
+  color: rgba(212,225,231, 0.65); /* Misty Light Blue with opacity - Primary */
   margin-bottom: 6px;
   letter-spacing: -0.03em;
 }
@@ -365,7 +365,7 @@
   font-size: clamp(3rem, 6.5vw, 5.6rem);
   font-weight: 900;
   letter-spacing: -0.05em;
-  background: linear-gradient(135deg, #7f9a83, #d4e8d6, #4a6e4e);
+  background: linear-gradient(135deg, #7F9A83, #D4E1E7, #5A7A63); /* Sage to Misty to darker Sage */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -374,7 +374,7 @@
 .hero-heading .his-word::before {
   content: 'His Word';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, #7f9a83, #d4e8d6, #4a6e4e);
+  background: linear-gradient(135deg, #7F9A83, #D4E1E7, #5A7A63);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -387,7 +387,7 @@
   display: block;
   height: 0.45rem;
   border-radius: 999px;
-  background: linear-gradient(to right, #7f9a83, rgba(127,154,131,0.5), transparent);
+  background: linear-gradient(to right, #7F9A83, rgba(127,154,131,0.5), transparent);
   box-shadow: 0 0 18px rgba(127,154,131,0.45);
   margin-top: 10px;
   width: 0;
@@ -398,19 +398,19 @@
 .hero-desc { max-width: 380px; margin-bottom: 32px; }
 .hero-desc .line1 {
   font-size: 1rem; font-weight: 500;
-  color: rgba(210,228,212,0.7);
+  color: rgba(212,225,231,0.7); /* Misty Light Blue with opacity - Primary */
   margin-bottom: 8px; line-height: 1.6;
 }
 .hero-desc .highlight {
   font-weight: 600;
-  color: rgba(220,240,222,0.95);
+  color: rgba(212,225,231,0.95); /* Misty Light Blue with higher opacity - Primary */
   background: linear-gradient(to right,
     rgba(127,154,131,0.22), rgba(127,154,131,0.1));
   padding: 2px 8px; border-radius: 4px;
 }
 .hero-desc .line2 {
   font-size: 0.88rem;
-  color: rgba(190,215,195,0.55);
+  color: rgba(212,225,231,0.55); /* Misty Light Blue with opacity - Primary */
   line-height: 1.72; font-style: italic;
 }
 
@@ -419,30 +419,31 @@
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 28px;
-  background: linear-gradient(to right, #7f9a83, #4a6e4e);
-  color: #0a0f0b; border: none; border-radius: 7px;
+  background: linear-gradient(to right, #7F9A83, #5A7A63); /* Sage / Muted Moss gradient */
+  color: #D4E1E7; /* Misty Light Blue text */
+  border: none; border-radius: 7px;
   font-size: 0.88rem; font-weight: 700; letter-spacing: 0.8px;
   cursor: pointer; transition: all 0.3s ease;
-  box-shadow: 0 10px 32px rgba(0,0,0,0.28);
+  box-shadow: 0 10px 32px rgba(8,36,52,0.4);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(127,154,131,0.32);
+  box-shadow: 0 14px 36px rgba(127,154,131,0.4);
 }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 28px;
-  background: rgba(10,15,11,0.65);
-  color: rgba(210,228,212,0.85);
-  border: 2px solid rgba(210,228,212,0.15);
+  background: rgba(212,225,231,0.1); /* Misty Light Blue with opacity */
+  color: #D4E1E7; /* Misty Light Blue text */
+  border: 2px solid rgba(212,225,231,0.3);
   border-radius: 7px; font-size: 0.88rem; letter-spacing: 0.8px;
   cursor: pointer; transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 22px rgba(8,36,52,0.3);
 }
 .btn-secondary:hover {
-  border-color: rgba(127,154,131,0.5);
-  color: #7f9a83;
+  border-color: #7F9A83; /* Sage border on hover */
+  color: #7F9A83; /* Sage text on hover */
 }
 
 .scripture-right {
@@ -455,7 +456,7 @@
 }
 .scripture-right p {
   font-size: 0.73rem;
-  color: rgba(127,154,131,0.4);
+  color: rgba(127,154,131,0.4); /* Sage with opacity - Accent */
   font-style: italic;
   line-height: 1.75;
 }
@@ -464,7 +465,7 @@
   margin-top: 5px;
   font-size: 0.65rem;
   letter-spacing: 2px;
-  color: rgba(127,154,131,0.3);
+  color: rgba(127,154,131,0.3); /* Sage with lower opacity - Accent */
   text-transform: uppercase;
 }
 
@@ -486,13 +487,13 @@
   bottom: 24px; left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  background: rgba(8,12,9,0.65);
-  color: rgba(127,154,131,0.6);
+  background: rgba(8,36,52,0.65); /* Deep Forest Green with opacity */
+  color: rgba(127,154,131,0.6); /* Sage text - Accent */
   font-size: 0.66rem;
   letter-spacing: 2.5px;
   padding: 7px 20px;
   border-radius: 20px;
-  border: 1px solid rgba(127,154,131,0.18);
+  border: 1px solid rgba(127,154,131,0.18); /* Sage border - Accent */
   pointer-events: none;
   white-space: nowrap;
 }
@@ -512,8 +513,8 @@
 .bible-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #2d3a2f 0%, #1a231b 100%);
-  border: 3px solid #7f9a83;
+  background: linear-gradient(135deg, #0f2a38 0%, #082434 100%); /* Deep Forest Green gradient */
+  border: 3px solid #7F9A83; /* Sage border */
   border-radius: 8px 4px 4px 8px;
   display: flex;
   flex-direction: column;
@@ -542,7 +543,7 @@
   font-family: 'Georgia', serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #7f9a83;
+  color: #7F9A83; /* Sage text */
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -551,15 +552,15 @@
 .bible-front .bible-subtitle {
   font-family: 'Georgia', serif;
   font-size: 0.85rem;
-  color: rgba(127,154,131,0.7);
+  color: rgba(127,154,131,0.7); /* Sage with opacity */
   letter-spacing: 2px;
 }
 
 .bible-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1a231b 0%, #2d3a2f 100%);
-  border: 3px solid #7f9a83;
+  background: linear-gradient(135deg, #082434 0%, #0f2a38 100%); /* Deep Forest Green gradient */
+  border: 3px solid #7F9A83; /* Sage border */
   border-radius: 4px 8px 8px 4px;
   transform: rotateY(180deg);
   backface-visibility: hidden;
@@ -571,7 +572,7 @@
   top: 0;
   width: 20px;
   height: 100%;
-  background: linear-gradient(to right, #1a231b, #2d3a2f);
+  background: linear-gradient(to right, #082434, #0f2a38); /* Deep Forest Green gradient */
   transform: rotateY(-90deg);
   transform-origin: right;
 }
