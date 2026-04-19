@@ -35,8 +35,8 @@ const ListenBiblePage = () => {
     fetchBooks();
   }, []);
 
-  const oldTestament = books.filter(b => b.testament === 'old');
-  const newTestament = books.filter(b => b.testament === 'new');
+  const oldTestament = books.filter(b => b.testament.toLowerCase() === 'old');
+  const newTestament = books.filter(b => b.testament.toLowerCase() === 'new');
 
   return (
     <Layout>
