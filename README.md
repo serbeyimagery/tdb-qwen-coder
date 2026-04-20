@@ -159,7 +159,3 @@ This project is private and proprietary.
 ## Contributing
 
 This is a private project. For questions or issues, please contact the maintainers.
-
----
-
-Built with ❤️ using [Lovable](https://lovable.dev)
